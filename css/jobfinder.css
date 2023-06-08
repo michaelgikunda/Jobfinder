@@ -1,0 +1,149 @@
+@font-face
+{
+   font-family: "Material Icons";
+   font-display: swap;
+   src: url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
+        url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+        url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+@font-face
+{
+   font-family: "Josefin Sans";
+   font-display: swap;
+   src: url('../fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+@font-face
+{
+   font-family: "Sherman Display";
+   font-display: swap;
+   src: url('../fonts/Sherman-Display.ttf') format('truetype');
+}
+@font-face
+{
+   font-family: "Josefin Sans SemiBold";
+   font-display: swap;
+   src: url('../fonts/JosefinSans-SemiBold.ttf') format('truetype');
+}
+@font-face
+{
+   font-family: "Josefin Sans Medium";
+   font-display: swap;
+   src: url('../fonts/JosefinSans-Medium.ttf') format('truetype');
+}
+@font-face
+{
+   font-family: "Brush Script MT";
+   font-display: swap;
+   src: url('../fonts/BRUSHSCI.ttf') format('truetype');
+}
+@font-face
+{
+   font-family: "LEMON MILK Bold";
+   font-display: swap;
+   src: url('../fonts/LEMONMILK-Bold.otf') format('opentype');
+}
+@font-face
+{
+   font-family: "LEMON MILK";
+   font-display: swap;
+   src: url('../fonts/LEMONMILK-Bold.otf') format('opentype');
+}
+@keyframes animate-fade-out
+{
+   0% { opacity: 1;  }
+   100% { opacity: 0;  }
+}
+@keyframes slide-right-in
+{
+   0% { transform: translate(100%,0px) rotate(1deg) ; opacity: 0; transform-origin: 0 0;  }
+   100% { opacity: 1; transform: translate(0px,0px) rotate(0deg) ; transform-origin: 0 0;  }
+}
+h1, .h1
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   text-decoration: none;
+   color: #000000;
+   --color: #000000;
+   background-color: transparent;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   display: inline-block;
+}
+h2, .h2
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 27px;
+   text-decoration: none;
+   color: #000000;
+   --color: #000000;
+   background-color: transparent;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   display: inline-block;
+}
+h3, .h3
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 24px;
+   text-decoration: none;
+   color: #000000;
+   --color: #000000;
+   background-color: transparent;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   display: inline-block;
+}
+h4, .h4
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 21px;
+   font-style: italic;
+   text-decoration: none;
+   color: #000000;
+   --color: #000000;
+   background-color: transparent;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   display: inline-block;
+}
+h5, .h5
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 19px;
+   text-decoration: none;
+   color: #000000;
+   --color: #000000;
+   background-color: transparent;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   display: inline-block;
+}
+h6, .h6
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   text-decoration: none;
+   color: #000000;
+   --color: #000000;
+   background-color: transparent;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   display: inline-block;
+}
+.CustomStyle
+{
+   font-family: "Courier New";
+   font-weight: bold;
+   font-size: 16px;
+   text-decoration: none;
+   color: #2E74B5;
+   --color: #2E74B5;
+   background-color: transparent;
+}
