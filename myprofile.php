@@ -166,7 +166,7 @@
                      <div class="bloginfo">
                         <span class="blogsubject">'.$rowing['title'].'</span>
                         <p><span id="wb_uid">'.$description.'</span></p>
-                        <a class="blogbutton" href="./learnmore.php?title='.$rowing["title"].'&description='.$rowing["description"].'&video='.$rowing["video"].'&image='.$rowing["video"].'">Learn More</a>
+                        <a class="blogbutton" href="./learnmore.php?title='.$rowing["title"].'&description='.$rowing["description"].'&video='.$rowing["video"].'&image='.$rowing["video"].'">View</a>
                         <a class="blogbutton" href="./delete_row.php?delete='.$rowing['id'].'">Delete</a>
                      </div>
                      <div class="blogfooter"><span class="blogdate">Posted on '.$rowing['date'].'</span></div>

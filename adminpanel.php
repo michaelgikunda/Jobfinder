@@ -119,7 +119,6 @@
                <tr>
                   <td class="cell0"><p id="wb_uid220"><span id="wb_uid221">&nbsp;</span><span id="wb_uid222">Email</span></p></td>
                   <td class="cell0"><p id="wb_uid223"><span id="wb_uid224">&nbsp;</span><span id="wb_uid225">Password</span></p></td>
-                  <td class="cell1"><p id="wb_uid226"><span id="wb_uid227">&nbsp;</span><span id="wb_uid228">Edit</span></p></td>
                   <td class="cell1"><p id="wb_uid229"><span id="wb_uid230">&nbsp;</span><span id="wb_uid231">Delete</span></p></td>
                </tr>
                <?php
@@ -138,7 +137,6 @@
                <td class="cell4" style="border: 1px solid black;"><p style="color: white;">'.$row['email'].'</p></td>
                <td class="cell5" style="border: 1px solid black;"><p style="color: white;">'.$row['password'].'</p></td>
                <form action="adminpanel.php" method="post">
-               <td class="cell6" style="border: 1px solid black;"><p><button style="font-family: Josefin Sans;" name="edit">Edit</button></p></td>
                <td class="cell7" style="border: 1px solid black;"><p>
                <a href="./edit.php?id='.$row['id'].'&admin=admin"><button style="font-family: Josefin Sans;" name="delete">Delete</button></p></td></a>
                </form>

@@ -48,14 +48,14 @@
          <p>Your Profile</p>
       </div>
       <?php
-         echo '<input type="text" id="firstname" name="firstname" value="" spellcheck="false" placeholder="'.$row['firstname'].'">
+         echo '<input type="text" style="width: 90px;" id="firstname" name="firstname" value="" spellcheck="false" placeholder="'.$row['firstname'].'">
          ';
       ?>
       <div id="wb_Text4">
          <p>First Name</p>
       </div>
       <?php
-         echo '<input type="text" id="gikunda" name="gikunda" value="" disabled spellcheck="false" placeholder="'.$row['lastname'].'">
+         echo '<input type="text" style="width: 90px;" id="gikunda" name="gikunda" value="" disabled spellcheck="false" placeholder="'.$row['lastname'].'">
          ';
       ?>
       <div id="wb_Text5">
@@ -76,7 +76,7 @@
          <p>Password</p>
       </div>
       <?php
-         echo '<input type="text" id="email" style="height: 40px; box-shadow: none;" name="email" value="" disabled spellcheck="false" placeholder="'.$row['email'].'">
+         echo '<input type="text" id="email" style="height: 40px; width: 170px; box-shadow: none;" name="email" value="" disabled spellcheck="false" placeholder="'.$row['email'].'">
          ';
       ?>
       <div id="wb_Text9">

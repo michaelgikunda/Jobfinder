@@ -7,9 +7,10 @@
       
       header("Location: login.php");
    }
-
-
+   
+ 
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -36,8 +37,10 @@
       <div id="wb_Text1">
          <p style="line-height: 1.5; margin-left: -60px; width: 1000px;">Explore The Uploaded SKills</p>
       </div>
-      <button type="submit" id="ThemeableButton2" name="" value="Feel Free" class="ui-button ui-corner-all">Feel Free</button>
+      <form method="GET" action="finder.php">
       <input type="text" id="searchskill" name="searchskill" value="" spellcheck="false" placeholder="Search for a skill">
+      <button type="submit" id="search" name="search" value="Search" class="ui-button ui-corner-all">Search</button>
+      </form>
       <div id="wb_Text2">
          <p style="margin-top: 150px;">Kenya's 1st Skill Based Job search Platform</p>
       </div>
@@ -122,8 +125,48 @@
      }
 
       include 'dbcon.php';
-   
 
+      // Check if a search query is submitted
+      if (isset($_GET['searchskill'])) {
+            $searchQuery = $_GET['searchskill'];
+         
+            // Modify the SQL query to include the search condition
+            $sql = "SELECT * FROM skills WHERE title LIKE '%$searchQuery%' OR description LIKE '%$searchQuery%'";
+         
+            
+         // Execute the modified query
+         $result = $dbconn->query($sql);
+         // Output the data in the cards
+      if ($result->num_rows > 0) {
+         // Loop through the results and output them in the cards
+         $i = 1;
+         
+      echo'<div id="Blog1">';
+      while($row = $result->fetch_assoc()) {
+         $description = $row['description'];
+            $words = explode(' ', $description);
+            if (count($words) > 7) {
+               $description = implode(' ', array_slice($words, 0, 7)) . '...';
+            }
+                  echo'
+                  <div class="blogrow">
+                     <div class="blogcolumn">
+                        <div class="blogitem">
+                           <div class="blogthumb"><a href="./learnmore.php?title='.$row["title"].'&description='.$row["description"].'&video='.$row["video"].'&image='.$row["image"].'"><video alt="Michael" onmouseover="this.play()" onmouseleave="this.pause()" src="videos/'.$row['video'].'" loading="lazy"></a></div>
+                           <div class="bloginfo">
+                              <span class="blogsubject">'.$row['title'].'</span>
+                              <p><span id="wb_uid">'.$description.'</span></p>
+                              <a class="blogbutton" href="./learnmore.php?title='.$row["title"].'&description='.$row["description"].'&video='.$row["video"].'&image='.$row["image"].'">Learn more</a>
+                           </div>
+                           
+                           
+                           <div class="blogfooter"><span class="blogdate">Posted on '.$row['date'].'</span></div>
+                        </div></div>';
+      }
+      echo '</div>';
+
+   }
+      }else{
       $connect = "SELECT * FROM skills";
       $query = mysqli_query($dbconn, $connect);
       
@@ -161,7 +204,7 @@
       }
       echo '</div>';
 
-   }
+   }}
    ?>
 </body>
 </html>
